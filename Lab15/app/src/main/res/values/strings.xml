@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lab15_PavelRudenia</string>
+    <string name="yyyy_mm_dd">YYYY-MM-DD</string>
+    <string name="enter_period">Введите период</string>
+    <string name="select">Выбрать</string>
+    <string name="task_1">Список наилучших студентов для всех групп факультета за период</string>
+    <string name="task_2">Список студентов, получивших оценки ниже 4, для всех групп факультета за период</string>
+    <string name="task_3">Сравнительный анализ по группам за период: по предмету и в целом</string>
+    <string name="task_4">Сравнение по факультетам за определенный период</string>
+    <string name="task_5">Список группы со средней оценкой для каждого студента по предмету,
+        для студента в целом, для группы в целом с выбором периода</string>
+    <string name="сompare_by_subject">Сравнить по предмету?</string>
+</resources>

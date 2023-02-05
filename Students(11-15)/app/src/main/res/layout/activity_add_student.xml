@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddActivities.AddStudentActivity"
+    android:layout_margin="10dp">
+
+    <TextView android:id="@+id/txtGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Группа:"
+        android:textSize="17sp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/spnrGroup"
+        app:layout_constraintBottom_toBottomOf="@id/spnrGroup" />
+
+    <Spinner android:id="@+id/spnrGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintLeft_toRightOf="@+id/txtGroup"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText android:id="@+id/edtStudentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ФИО студента"
+        android:inputType="text"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/spnrGroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView android:id="@+id/txtStudentBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дата рождения:"
+        android:textSize="17sp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtStudentBirthday"
+        app:layout_constraintBottom_toBottomOf="@+id/edtStudentBirthday"/>
+
+    <EditText android:id="@+id/edtStudentBirthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtStudentName"
+        app:layout_constraintLeft_toRightOf="@+id/txtStudentBirthday"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <EditText android:id="@+id/edtStudentAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Адрес проживания"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtStudentBirthday"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <CheckBox android:id="@+id/chckIsHeadOfGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Староста группы"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/edtStudentAddress"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button android:id="@+id/btnAddStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить студента"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/chckIsHeadOfGroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

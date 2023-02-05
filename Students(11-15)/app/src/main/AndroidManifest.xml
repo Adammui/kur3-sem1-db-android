@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="karbanovich.fit.bstu.students">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Students">
+        <activity
+            android:name=".Activity.SelectedStudentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.StudentsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShowActivities.ShowComparByGroups2"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShowActivities.ShowData"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShowActivities.ShowActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddActivities.AddActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddActivities.AddProgressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddActivities.AddSubjectActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddActivities.AddStudentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddActivities.AddGroupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddActivities.AddFacultyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:authorities="com.karbanovich.providers.GroupsList"
+            android:name="karbanovich.fit.bstu.students.ContentProvider.GroupProvider"
+            android:exported="true"
+            android:grantUriPermissions="true" />
+    </application>
+
+</manifest>

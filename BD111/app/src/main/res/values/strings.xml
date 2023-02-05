@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">BD11-1</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year </string>
+
+    <string name="period">Period</string>
+    <string name="fromDate">From: </string>
+    <string name="toDate">To: </string>
+    <string name="from">From </string>
+    <string name="to">To </string>
+
+    <string name="avgMarks">Average marks</string>
+    <string name="bestStudents">Top 4 students</string>
+    <string name="badStudents">Students have less than 4 mark</string>
+    <string name="avgGroups">Average marks in groups</string>
+    <string name="faculties">Average marks in faculties</string>
+    <string name="count">Count</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

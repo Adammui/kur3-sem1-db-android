@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ShowActivities.ShowActivity"
+    android:layout_margin="10dp">
+
+    <TextView android:id="@+id/txtFaculty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Факультет: "
+        android:textSize="17sp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spnrFaculty"
+        app:layout_constraintBottom_toBottomOf="@+id/spnrFaculty"/>
+
+    <Spinner android:id="@+id/spnrFaculty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/txtFaculty"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView android:id="@+id/txtGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Группа: "
+        android:textSize="17sp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spnrGroup"
+        app:layout_constraintBottom_toBottomOf="@+id/spnrGroup"/>
+
+    <Spinner android:id="@+id/spnrGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/spnrFaculty"
+        app:layout_constraintLeft_toRightOf="@+id/txtGroup"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <RadioGroup android:id="@+id/radioGrpDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spnrGroup">
+
+        <RadioButton android:id="@+id/radioBtnPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="Период:"
+            android:checked="true"/>
+
+        <RadioButton android:id="@+id/radioBtnRecently"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="Последние:"
+            android:layout_marginTop="5dp"/>
+    </RadioGroup>
+
+    <EditText android:id="@+id/edtStartDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@+id/radioGrpDate"
+        app:layout_constraintTop_toTopOf="@+id/radioGrpDate"
+        app:layout_constraintRight_toLeftOf="@+id/txtDateDash"/>
+
+    <TextView android:id="@+id/txtDateDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" \u2014 "
+        android:textSize="17sp"
+        app:layout_constraintLeft_toRightOf="@+id/radioGrpDate"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtStartDate"
+        app:layout_constraintBottom_toBottomOf="@+id/edtStartDate"/>
+
+    <EditText android:id="@+id/edtEndDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/txtDateDash"
+        app:layout_constraintTop_toTopOf="@id/edtStartDate"
+        app:layout_constraintBottom_toBottomOf="@+id/edtStartDate"/>
+
+    <EditText android:id="@+id/edtNumberOfLast"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:inputType="number"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@+id/radioGrpDate"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGrpDate"
+        app:layout_constraintRight_toLeftOf="@+id/spnrTypeOfLastPeriod"/>
+
+    <Spinner android:id="@+id/spnrTypeOfLastPeriod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/edtNumberOfLast"
+        app:layout_constraintBottom_toBottomOf="@id/edtNumberOfLast"
+        app:layout_constraintLeft_toRightOf="@id/edtNumberOfLast"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button android:id="@+id/btnShowAvgIndicat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Средние показатели группы"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/edtNumberOfLast"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button android:id="@+id/btnShowBestStud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Лучшие студенты по факультету"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/btnShowAvgIndicat"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button android:id="@+id/btnShowUnderperfStud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Неуспевающие студенты по факультету"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/btnShowBestStud"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button android:id="@+id/btnShowComparByGroups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сравнительный анализ по группам"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/btnShowUnderperfStud"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button android:id="@+id/btnShowComparByFac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сравнение по факультетам"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/btnShowComparByGroups"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button android:id="@+id/btnShowComparByGroups2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сравнительный анализ по группам 2"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowComparByFac"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

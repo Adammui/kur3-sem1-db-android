@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="1054dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+
+        <TextView
+            android:id="@+id/absolute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Absolute: " />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name: " />
+
+        <TextView
+            android:id="@+id/path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Path: " />
+
+        <TextView
+            android:id="@+id/readWrite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Read/Write: " />
+
+        <TextView
+            android:id="@+id/external"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="External state: " />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="GETFILESDIR"
+            android:text="Get file dir " />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="GETCACHEDIR"
+            android:text="Get cache dir " />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="GETEXTERNALFILESDIR"
+            android:text="Get external file dir " />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="GETEXTERNALCACHEDIR"
+            android:text="Get external cache dir " />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="GETEXTERNALSTORAGEDIRECTORY"
+            android:text="Get external storage dir" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="GETEXTERNALSTORAGEPUBLICDIRECTORY"
+            android:text="Get external storage public directory" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

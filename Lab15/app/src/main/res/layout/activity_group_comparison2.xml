@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_view"
+            android:textAlignment="center"
+            android:text="@string/task_5"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            style="@style/text_view"
+            android:textAlignment="center"
+            android:text="@string/enter_period" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/date_with"
+                    style="@style/edit_text"
+                    android:inputType="date"
+                    android:hint="@string/yyyy_mm_dd" />
+
+                <EditText
+                    android:id="@+id/date_on"
+                    style="@style/edit_text"
+                    android:inputType="date"
+                    android:hint="@string/yyyy_mm_dd" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/radio_button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Группы со средней оценкой для каждого студента по предмету" />
+
+                <RadioButton
+                    android:id="@+id/radio_button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Группы со средней оценкой для студента в целом" />
+
+                <RadioButton
+                    android:id="@+id/radio_button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Группы со средней оценкой для группы в целом" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <Spinner
+            android:id="@+id/student_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/groups_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/button_select"
+            style="@style/button"
+            android:text="@string/select" />
+
+        <GridView
+            android:id="@+id/result"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        </GridView>
+
+    </LinearLayout>
+
+</RelativeLayout>

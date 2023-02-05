@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConcreteGroupActivity"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+    <EditText android:id="@+id/edtTxtSearchGroupId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите номер группы"
+        android:inputType="number"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnGetGroup"/>
+
+    <Button android:id="@+id/btnGetGroup"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Найти"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtTxtSearchGroupId"
+        app:layout_constraintBottom_toBottomOf="@+id/edtTxtSearchGroupId"/>
+
+    <EditText android:id="@+id/edtTxtGroupId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Номер группы"
+        android:inputType="number"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/btnGetGroup"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText android:id="@+id/edtTxtHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Имя страросты"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtGroupId"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText android:id="@+id/edtTxtCountOfStudents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Количество человек в группе"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtHead"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button android:id="@+id/btnDeleteSelectedGroup"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Удалить"
+        android:backgroundTint="@color/red"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtCountOfStudents"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button android:id="@+id/btnEditSelectedGroup"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Изменить"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtCountOfStudents"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button android:id="@+id/btnAddGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить группу"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/btnEditSelectedGroup"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

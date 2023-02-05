@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentsByGroupActivity"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <Button android:id="@+id/btnDeleteAllStudentsByGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Удалить всех студентов в группе"
+        android:backgroundTint="@color/red"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText android:id="@+id/edtTxtSearchGroupId"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:hint="Введите номер группы"
+            android:inputType="number"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"/>
+
+        <Button android:id="@+id/btnGetStudents"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Найти" />
+    </LinearLayout>
+
+    <ListView android:id="@+id/listViewStudentsByGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"/>
+
+</LinearLayout>
